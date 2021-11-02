@@ -1,0 +1,62 @@
+:root{
+  --background: #f5f5f5;
+  --btnGreen: #2EB394;
+  --btnWhite: #fff;
+  --btnBlue: #02306A;
+  --btnFont: 20px;
+  --btnSize: 110px;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 30%;
+  min-height: 100vh;
+  background: var(--background);
+  z-index: -1;
+}
+
+.content{
+  display: flex;
+}
+
+.left-wrap{
+  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.btn-wrapper .btn{
+  display: block;
+  width: var(--btnSize);
+  margin: 30px auto 0;
+  color: var(--btnWhite);
+  font-size: var(--btnFont);
+  background: var(--btnGreen);
+  padding: 13px 50px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.btn-wrapper .btn:hover{
+  background: var(--btnBlue);
+  transition: all .3s ease-in-out;
+}
