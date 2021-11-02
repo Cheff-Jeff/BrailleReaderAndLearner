@@ -32,6 +32,10 @@ body::after{
   display: flex;
 }
 
+.content .left-wrap, .content .container{
+  width: 50%;
+}
+
 .left-wrap{
   margin-right: 120px;
   display: flex;
@@ -59,4 +63,19 @@ body::after{
 .btn-wrapper .btn:hover{
   background: var(--btnBlue);
   transition: all .3s ease-in-out;
+}
+
+.container{
+  position: relative;
+}
+
+.container p#full{
+  color: #acacac;
+}
+
+.container p{
+  font-size: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
