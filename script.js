@@ -3,6 +3,8 @@ const title = document.getElementById("title");
 const txt = document.getElementById("txt");
 const titleArr = title.innerHTML.split('');
 const txtArr = txt.innerHTML.split('');
+const titleHtml = title.innerHTML;
+const txtHtml = txt.innerHTML;
 let titleDone = false;
 
 let letters = [
@@ -65,12 +67,21 @@ const getBraille = (char) => {
 
 /*
   Zoek elke seconden naar een teken en bijbehorende braille code.
-  Zet een outline om het teken.
-  
+  Zet een outline om het teken. 
 */
 const read = (Arr, i) => {
   let newArr = null;
+
   setTimeout(() => {
+    if(i == 0){
+      if(titleDone){
+        title.innerHTML = titleHtml;
+      }
+      else{
+        txt.innerHTML = txtHtml;
+      }
+    }
+
     if(Arr[i] != " "){
       let newBr = getBraille(Arr[i]);
       newLetter.innerHTML = newBr;
@@ -90,26 +101,21 @@ const read = (Arr, i) => {
     else{
       title.innerHTML = newTxt;   
     } 
-
+    
     i++
     if(i < Arr.length){
       read(Arr, i);
     }
     else{
-      let newTxt = Arr.toString();
       if(titleDone){
-        newTxt = newTxt.replace(/,/g,'');
-        txt.innerHTML = newTxt;
         titleDone = false;
       }
       else{
-        newTxt = newTxt.replace(/,/g,'');
-        title.innerHTML = newTxt;
         titleDone = true;
       }
       setNewTxt();
     }
-  },1000);
+  },500);
 }
 
 read(titleArr, 0);
