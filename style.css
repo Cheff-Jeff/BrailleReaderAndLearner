@@ -3,7 +3,7 @@
   --btnGreen: #2EB394;
   --btnWhite: #fff;
   --btnBlue: #02306A;
-  --btnFont: 20px;
+  --btnFont: 19px;
   --btnSize: 110px;
   --font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   --bigSize: 48px; /* 36pt */
@@ -20,6 +20,7 @@ body{
   margin: 0;
   position: relative;
   min-height: 100vh;
+  font-family: var(--font);
 }
 
 body::after{
