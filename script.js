@@ -1,11 +1,14 @@
 const newLetter = document.getElementById("newLetter");
-const title = document.getElementById("title").innerHTML;
-const txt = document.getElementById("txt").innerHTML;
+const title = document.getElementById("title");
+const txt = document.getElementById("txt");
+const titleArr = title.innerHTML.split('');
+const txtArr = txt.innerHTML.split('');
 let titleDone = false;
 
 let letters = [
   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
-  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+  ",",";",":",".","?","!","-",
 ];
 
 let braille = [
@@ -35,6 +38,13 @@ let braille = [
   "&#10285;", //x
   "&#10301;", //y
   "&#10293;", //z
+  "&#10242;",//,
+  "&#10246;",//;
+  "&#10258;",//:
+  "&#10290;",//.
+  "&#10274;",//?
+  "&#10262;",//!
+  "&#10276;",//-
 ]
 
 const getBraille = (char) => {
@@ -49,32 +59,57 @@ const getBraille = (char) => {
   return "";
 }
 
-let txtArr = title.split('');
-let i = 0;
-
-const read = () => {
+const read = (Arr, i) => {
+  let newArr = null;
   setTimeout(() => {
-    if(txtArr[i] != " "){
-      let newBr = getBraille(txtArr[i]);
+    if(Arr[i] != " "){
+      let newBr = getBraille(Arr[i]);
       newLetter.innerHTML = newBr;
     }else{
       newLetter.innerHTML = " ";
     }
 
-    let newChar = txtArr[i];
-    let newArr = txtArr;
-    console.log(newArr);
-    newArr[i] = '<span class="Outline">' + newChar + '</span>';
+    let newChar = Arr[i];
+    newArr = [...Arr];
+    newArr[i] = '<span class="outline">' + newChar + '</span>';
+
     let newTxt = newArr.toString();
-    console.log(newTxt);
+    newTxt = newTxt.replace(/,/g,'');
+    if(titleDone){
+      txt.innerHTML = newTxt;   
+    }
+    else{
+      title.innerHTML = newTxt;   
+    } 
 
     i++
-
-    if(i < txtArr.length)
-    {
-      read();
+    if(i < Arr.length){
+      read(Arr, i);
     }
-  }, 5000);
+    else{
+      let newTxt = Arr.toString();
+      if(titleDone){
+        newTxt = newTxt.replace(/,/g,'');
+        txt.innerHTML = newTxt;
+        titleDone = false;
+      }
+      else{
+        newTxt = newTxt.replace(/,/g,'');
+        title.innerHTML = newTxt;
+        titleDone = true;
+      }
+      setNewTxt();
+    }
+  },1000);
 }
 
-read();
+read(titleArr, 0);
+
+const setNewTxt = () => {
+  if(!titleDone){
+    read(titleArr, 0);
+  }
+  else{
+    read(txtArr, 0);
+  }
+}
