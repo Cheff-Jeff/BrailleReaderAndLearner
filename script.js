@@ -47,6 +47,9 @@ let braille = [
   "&#10276;",//-
 ]
 
+/*
+  return braille code voor een letter of teken.
+*/
 const getBraille = (char) => {
   char = char.toUpperCase();
   for(let i = 0; i <= letters.length; i++)
@@ -59,6 +62,11 @@ const getBraille = (char) => {
   return "";
 }
 
+/*
+  Zoek elke seconden naar een teken en bijbehorende braille code.
+  Zet een outline om het teken.
+  
+*/
 const read = (Arr, i) => {
   let newArr = null;
   setTimeout(() => {
@@ -105,6 +113,9 @@ const read = (Arr, i) => {
 
 read(titleArr, 0);
 
+/* 
+  stuur tekst naar de loop.
+*/
 const setNewTxt = () => {
   if(!titleDone){
     read(titleArr, 0);
