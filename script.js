@@ -49,6 +49,7 @@ let braille = [
 
 /*
   return braille code voor een letter of teken.
+  oke!
 */
 const getBraille = (char) => {
   char = char.toUpperCase();
