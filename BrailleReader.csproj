@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="6.0.0-rc.2.21480.5" />
+    <PackageReference Include="System.Speech" Version="6.0.0-rc.2.21480.5" />
+    <PackageReference Include="Uno.UI" Version="3.10.11" />
+  </ItemGroup>
+
+</Project>
