@@ -25,6 +25,7 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+  z-index: 999;
 }
 
 .logo{
@@ -44,6 +45,7 @@ header{
 }
 
 .nav ul a{
+  font-family: var(--font);
   font-size: var(--mainSize);
   color: var(--btnBlue);
   font-weight: bold;
@@ -63,6 +65,10 @@ header{
 }
 
 body{
+  margin: 0;
+}
+
+main{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,21 +127,6 @@ body{
   background: var(--btnBlue);
   transition: all .3s ease-in-out;
 }
-
-/* .container{
-  position: relative;
-}
-
-.container p#full{
-  color:var(--gray);
-}
-
-.container p{
-  font-size: 200px;
-  position: absolute;
-  left: 0;
-  top: 0;
-} */
 
 .outline{
   position: relative;
