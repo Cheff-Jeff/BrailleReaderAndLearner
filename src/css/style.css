@@ -7,7 +7,8 @@
   --btnSize: 110px;
   --font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   --bigSize: 48px; /* 36pt */
-  --mainSize: 19px; /* 14pt*/
+  --mainSize: 20px; /* 14pt*/
+  --navTxtBig: 25px;
   --txtColor: #000;
   --gray: #bdbdbd;
 }
@@ -175,4 +176,69 @@ main{
   transform: rotate(327deg);
   z-index: -2;
   opacity: 0.1;
+}
+
+@media only screen and (max-width: 1100px)
+{
+  .content{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 799px)
+{
+  main{
+    padding: 0 40px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .nav ul a{
+    font-size: var(--navTxtBig);
+  }
+
+  .background{
+    width: 100%;
+    top: -118px;
+    right: 0px;
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 420px)
+{
+  header{
+    background: rgba(255,255,255,0.5);
+  }
+
+  .content{
+    margin: 130px auto 0;
+  }
+
+  .text-wrap h1, 
+  .text-wrap h1 span{
+    font-size: 27px;
+  }
+  .text-wrap p{
+    font-size: 17px;
+  }
+  .background{
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 375px)
+{
+  .content{
+    padding-bottom: 50px;
+    margin-top: 290px;
+  }
+}
+
+@media only screen and (max-width: 320px)
+{
+  .content{
+    padding-bottom: 50px;
+    margin-top: 480px;
+  }
 }
