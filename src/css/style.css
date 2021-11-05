@@ -31,6 +31,11 @@ header{
   width: 75px;
 }
 
+.nav{
+  display: flex;
+  align-items: center;
+}
+
 .nav ul{
   list-style: none;
   display: flex;
@@ -41,9 +46,15 @@ header{
 .nav ul a{
   font-size: var(--mainSize);
   color: var(--btnBlue);
+  font-weight: bold;
+  letter-spacing: 1px;
   text-decoration: none;
   margin-left: 20px;
   transition: color .3s ease-in-out;
+}
+
+.nav ul a.active{
+  color: var(--btnGreen);
 }
 
 .nav ul a:hover{
