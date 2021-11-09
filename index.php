@@ -8,6 +8,9 @@
     case '/home':
       require 'home.html';
       die();
+    case '/index.php':
+      require 'home.html';
+      die();
     break;
     case '/about':
       require 'about.html';
