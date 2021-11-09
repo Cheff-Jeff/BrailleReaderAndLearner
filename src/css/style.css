@@ -161,6 +161,7 @@ main{
   transform: translate(-50%, -50%);
   text-align: center;
   color: var(--txtColor);
+  z-index: 2;
 }
 
 .container .braille p#full{

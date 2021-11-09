@@ -1,10 +1,10 @@
 const title = document.getElementById("title");
 const txt1 = document.getElementById("txt1");
-const txt2 = document.getElementById("txt2");
+// const txt2 = document.getElementById("txt2");
 const newChar = document.getElementById("newChar");
 const titleTxt = document.getElementById("title").innerHTML;
 const txt1Txt = document.getElementById("txt1").innerHTML;
-const txt2Txt = document.getElementById("txt2").innerHTML;
+// const txt2Txt = document.getElementById("txt2").innerHTML;
 let focus = false;
 
 let letters = [
@@ -85,7 +85,7 @@ const remove = () => {
   focus = false;
   title.innerHTML = titleTxt;
   txt1.innerHTML = txt1Txt;
-  txt2.innerHTML = txt2Txt;
+  // txt2.innerHTML = txt2Txt;
 }
 
 title.addEventListener('mouseover', () => {
@@ -138,27 +138,27 @@ txt1.addEventListener('mouseover', () => {
 });
 txt1.addEventListener('mouseleave', remove);
 
-txt2.addEventListener('mouseover', () => {
-  if(!focus){
-    focus = true;
+// txt2.addEventListener('mouseover', () => {
+//   if(!focus){
+//     focus = true;
 
-    const letters = txt2.innerHTML;
-    let newHTML = '';
+//     const letters = txt2.innerHTML;
+//     let newHTML = '';
 
-    for(let letter of letters) {
-      newHTML+="<span class='x'>"+letter+"</span>";
-    }
+//     for(let letter of letters) {
+//       newHTML+="<span class='x'>"+letter+"</span>";
+//     }
 
-    txt2.innerHTML = newHTML;
+//     txt2.innerHTML = newHTML;
 
-    let elm = document.getElementsByClassName('x');
+//     let elm = document.getElementsByClassName('x');
     
-    for(i = 0; i < elm.length; i++){
-      let char = elm[i];
-      elm[i].addEventListener("mouseover", () => {
-        set(char.innerHTML);
-      });
-    }
-  }
-});
-txt2.addEventListener('mouseleave', remove);
+//     for(i = 0; i < elm.length; i++){
+//       let char = elm[i];
+//       elm[i].addEventListener("mouseover", () => {
+//         set(char.innerHTML);
+//       });
+//     }
+//   }
+// });
+// txt2.addEventListener('mouseleave', remove);

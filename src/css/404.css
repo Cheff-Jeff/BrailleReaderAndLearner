@@ -1,0 +1,123 @@
+:root{
+  --background: #f5f5f5;
+  --btnGreen: #2EB394;
+  --btnWhite: #fff;
+  --btnBlue: #02306A;
+  --btnFont: 19px;
+  --btnSize: 110px;
+  --font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  --bigSize: 48px; /* 36pt */
+  --mainSize: 20px; /* 14pt*/
+  --mediumSize: 30px;
+  --navTxtBig: 25px;
+  --txtColor: #000;
+  --gray: #bdbdbd;
+  --gradiant: linear-gradient(0deg, rgb(92 92 92), rgb(255 255 255) 83%);
+  --gradiant2: linear-gradient(0deg, rgb(226 226 226), rgb(255 255 255) 74%);
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 999;
+}
+
+.logo{
+  width: 75px;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+}
+
+.nav ul{
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul a{
+  font-family: var(--font);
+  font-size: var(--mainSize);
+  color: var(--btnBlue);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color .3s ease-in-out;
+}
+
+.nav ul a.active{
+  color: var(--btnGreen);
+}
+
+.nav ul a:hover{
+  color: var(--btnGreen);
+  transition: color .3s ease-in-out;
+}
+
+body{
+  margin: 0;
+  font-family: var(--font);
+}
+
+main{
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt{
+  text-align: center;
+}
+
+.txt h1{
+  font-size: var(--bigSize);
+  margin: 0;
+}
+
+.txt p{
+  font-size: var(--mediumSize);
+  margin: 0;
+}
+
+.container{
+  position: relative;
+}
+
+.container p{
+  position: absolute;
+  top: 45px;
+  font-size: 125px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* color: var(--txtColor); */
+  background: var(--gradiant);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container p#full{
+  background: var(--gradiant2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: var(--gray); */
+  z-index: -1;
+}
