@@ -44,6 +44,7 @@ namespace BrailleReader {
             this.ports.UseCompatibleStateImageBehavior = false;
             this.ports.ItemMouseHover += new System.Windows.Forms.ListViewItemMouseHoverEventHandler(this.ports_ItemMouseHover);
             this.ports.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.ports_ItemSelectionChanged);
+            this.ports.SelectedIndexChanged += new System.EventHandler(this.ports_SelectedIndexChanged);
             this.ports.MouseEnter += new System.EventHandler(this.ports_MouseEnter);
             // 
             // selectLbl

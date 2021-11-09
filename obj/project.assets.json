@@ -6421,19 +6421,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kylli\\.nuget\\packages\\": {}
+    "C:\\Users\\miesg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kylli\\source\\repos\\BrailleReader\\BrailleReader.csproj",
+      "projectUniqueName": "C:\\Users\\miesg\\OneDrive\\Proftaak\\BrailleReaderAndLearner\\BrailleReader.csproj",
       "projectName": "BrailleReader",
-      "projectPath": "C:\\Users\\Kylli\\source\\repos\\BrailleReader\\BrailleReader.csproj",
-      "packagesPath": "C:\\Users\\Kylli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kylli\\source\\repos\\BrailleReader\\obj\\",
+      "projectPath": "C:\\Users\\miesg\\OneDrive\\Proftaak\\BrailleReaderAndLearner\\BrailleReader.csproj",
+      "packagesPath": "C:\\Users\\miesg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\miesg\\OneDrive\\Proftaak\\BrailleReaderAndLearner\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kylli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\miesg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6490,7 +6490,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

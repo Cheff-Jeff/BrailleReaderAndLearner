@@ -35,6 +35,7 @@ namespace BrailleReader {
             this.input.Name = "input";
             this.input.Size = new System.Drawing.Size(287, 143);
             this.input.TabIndex = 0;
+            this.input.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // readerBtn
             // 

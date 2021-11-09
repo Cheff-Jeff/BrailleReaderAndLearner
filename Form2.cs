@@ -19,6 +19,11 @@ namespace BrailleReader {
             serialHelper = new SerialHelper(port).open();
         }
 
+        /// <summary>
+        /// todo commentaaar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void readerBtn_Click(object sender, EventArgs e) {
             string text = input.Text.ToUpper();
             char[] textSplit = text.ToCharArray();
@@ -29,6 +34,11 @@ namespace BrailleReader {
                 Thread.Sleep(1000);
             }
             serialHelper.resetPosition();
+        }
+
+        private void input_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

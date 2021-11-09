@@ -38,15 +38,24 @@ namespace BrailleReader {
                 MessageBox.Show("Selecteer een modus");
                 return;
             }
-            if (ports.SelectedItems.Count == 0) {
+            /*if (ports.SelectedItems.Count == 0) {
                 MessageBox.Show("Selecteer een Braille Reader");
                 return;
-            }
+            }*/
             if (readerBtn.Checked) {
                 string selectedPort = ports.SelectedItems[0].Text;
                 this.Hide();
                 new Form2(selectedPort).Show();
-            } else {
+            } 
+            
+            else if(learnerBtn.Checked)
+            {
+                string selectedPort = ports.SelectedItems[0].Text;
+                this.Hide();
+                new Form3(selectedPort).Show();
+            }
+            
+            else {
                 MessageBox.Show("Not yet implemented");
             }
             
@@ -88,6 +97,11 @@ namespace BrailleReader {
 
         private void ports_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e) {
             speechHelper.say(e.Item.Text + " geselecteerd");
+        }
+
+        private void ports_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

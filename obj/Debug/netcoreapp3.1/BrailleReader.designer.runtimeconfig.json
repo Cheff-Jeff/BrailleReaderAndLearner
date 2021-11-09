@@ -6,8 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Kylli\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Kylli\\.nuget\\packages"
+      "C:\\Users\\miesg\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\miesg\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
