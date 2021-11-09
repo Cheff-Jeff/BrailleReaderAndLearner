@@ -1,0 +1,39 @@
+body{
+  margin: 8px 150px;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.member{
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.member:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.member .img{
+  width: 300px;
+} 
+
+.member .team-txt{
+  max-width: 750px;
+  margin-left: 50px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.member:nth-child(even) .team-txt{
+  margin-left: 0px;
+  margin-right: 50px;
+  text-align: right;
+}
