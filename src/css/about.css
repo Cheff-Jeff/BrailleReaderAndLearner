@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-    z-index: 1;
+    z-index: 999;
     background: rgba(255,255,255,0.5);
   }
 
@@ -81,9 +81,13 @@
   body{
     margin: 0;
     font-family: var(--font);
-    background: linear-gradient(to right, #ffffff 81%, var(--background) 19%);
+    /* background: linear-gradient(to right, #ffffff 81%, var(--background) 19%); */
   }
   
+  .video_container video{
+    width: 850px;
+  }
+
   .pageWrapper{
     width: 100%;
     display: block;
@@ -100,8 +104,20 @@
     max-height: auto;
     overflow: hidden;
     overflow-y: auto;
+    z-index: 1;
   }
   
+  main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background: var(--background);
+    z-index: -1;
+  }
+
   .video_container{
     padding-left: 20px;
 }
@@ -114,6 +130,20 @@
     padding-right: 20px;
   }
   
+  .about_text h1{
+    text-align: left;
+  }
+
+  .about_text h2, .about_text p{
+    margin: 0;
+    text-align: left;
+  }
+
+  .about_text p{
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
   .team{
     margin: 8px 150px;
     font-family: var(--font);
@@ -129,6 +159,7 @@
     display: flex;
     justify-content: flex-start;
     margin: 0;
+    margin-bottom: 50px;
   }
   
   .member:nth-child(odd) {
@@ -181,16 +212,27 @@
     text-align: right;
   }
   
+@media only screen and (max-width: 1600px) {
+  .video_container video{
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .about_text{
+    margin: 0 55px;
+  }
+  .video_container{
+    margin-top: 100px;
+  }
+}
+
   @media only screen and (max-width: 1400px){
     
     main {
         flex-direction: column-reverse;
         padding: 5px;
       }
-
-    .video {
-        width: 100%;
-    }
 
     .team{
       margin: 8px 25px;
@@ -223,6 +265,13 @@
     .member .team-txt{
       text-align: center !important;
       margin: 0px !important;
+    }
+    .video_container{
+      padding: 0 20px;
+    }
+
+    .video_container video{
+      width: 100%;
     }
   }
   
