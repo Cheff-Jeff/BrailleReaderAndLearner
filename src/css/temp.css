@@ -1,12 +1,27 @@
+:root{
+  --background: #f5f5f5;
+  --btnGreen: #2EB394;
+  --btnWhite: #fff;
+  --btnBlue: #02306A;
+  --btnFont: 19px;
+  --btnSize: 110px;
+  --font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  --bigSize: 48px; /* 36pt */
+  --mainSize: 20px; /* 14pt*/
+  --navTxtBig: 25px;
+  --txtColor: #000;
+  --gray: #bdbdbd;
+}
+
 body{
   margin: 8px 150px;
+  font-family: var(--font);
 }
 
 img{
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 50%;
+  min-height: 300px;
 }
 
 .member{
@@ -15,13 +30,29 @@ img{
   margin: 0;
 }
 
-.member:nth-child(even) {
+.member:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
 .member .img{
   width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
 } 
+
+.title{
+  width: 100%;
+  text-align: center;
+}
+
+.title h2{
+  font-size: 45px;
+}
 
 .member .team-txt{
   max-width: 750px;
@@ -32,8 +63,55 @@ img{
   align-items: center;
 }
 
-.member:nth-child(even) .team-txt{
+.member .team-txt h3{
+  font-size: 26px;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.member .team-txt p{
+  font-size: 17px;
+  margin: 0px;
+}
+
+.member:nth-child(odd) .team-txt{
   margin-left: 0px;
   margin-right: 50px;
   text-align: right;
+}
+
+@media only screen and (max-width: 1400px){
+  body{
+    margin: 8px 25px;
+  }
+  .member{
+    margin: 35px 0px;
+  }
+}
+
+@media only screen and (max-width: 799px){
+  .member{
+    display: block;
+  }
+
+  .member .img{
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .member .team-txt{
+    text-align: center !important;
+    margin: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .member .img{
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 250px;
+    max-height: 250px;
+  }
 }
