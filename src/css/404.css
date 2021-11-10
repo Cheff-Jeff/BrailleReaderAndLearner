@@ -16,6 +16,10 @@
   --gradiant2: linear-gradient(0deg, rgb(226 226 226), rgb(255 255 255) 74%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img{
   width: 100%;
   display: block;

@@ -13,6 +13,10 @@
   --gray: #bdbdbd;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img{
   width: 100%;
   display: block;
@@ -210,6 +214,13 @@ main{
 {
   header{
     background: rgba(255,255,255,0.5);
+    padding: 10px 10px;
+  }
+
+  .nav ul a{
+    letter-spacing: 0px;
+    margin-left: 12px;
+    font-size: 22px;
   }
 
   .content{
@@ -241,5 +252,9 @@ main{
   .content{
     padding-bottom: 50px;
     margin-top: 480px;
+  }
+
+  .nav ul a{
+    font-size: 20px;
   }
 }
