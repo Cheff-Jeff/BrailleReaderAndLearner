@@ -16,10 +16,10 @@
       require './about.html';
       die();
     break;
-    // default:
-    //   http_response_code(404);
-    //   require '404.html';
-    //   die();
+    default:
+      http_response_code(404);
+      require '404.html';
+      die();
     break;
   }
 ?>
