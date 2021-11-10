@@ -11,6 +11,10 @@
     --txtColor: #000;
     --gray: #bdbdbd;
   }
+
+  html {
+      scroll-behavior: smooth;
+  }
   
   img{
     width: 100%;
@@ -77,6 +81,7 @@
   body{
     margin: 0;
     font-family: var(--font);
+    background: linear-gradient(to right, #ffffff 81%, var(--background) 19%);
   }
   
   .pageWrapper{
@@ -86,7 +91,6 @@
 
   main{
     padding: 0 150px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,15 +103,15 @@
   }
   
   .video_container{
-    position: sticky;
-  }
+    padding-left: 20px;
+}
   
   .about_text {
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding-right: 25px;
+    padding-right: 20px;
   }
   
   .team{
@@ -178,6 +182,16 @@
   }
   
   @media only screen and (max-width: 1400px){
+    
+    main {
+        flex-direction: column-reverse;
+        padding: 5px;
+      }
+
+    .video {
+        width: 100%;
+    }
+
     .team{
       margin: 8px 25px;
     }
@@ -187,6 +201,16 @@
   }
   
   @media only screen and (max-width: 799px){
+    
+    main {
+        flex-direction: column-reverse;
+        padding: 5px;
+      }
+
+    .video {
+        width: 100%;
+    }
+    
     .member{
       display: block;
     }
@@ -203,6 +227,16 @@
   }
   
   @media only screen and (max-width: 320px){
+    
+    main {
+        flex-direction: column-reverse;
+        padding: 5px;
+      }
+
+    .video {
+        width: 100%;
+    }
+
     .member .img{
       width: 250px;
       height: 250px;
@@ -221,10 +255,7 @@
   @media only screen and (max-width: 1100px) {
     main {
       flex-direction: column-reverse;
-      /* justify-content: center;
-      margin: 5px;
-      align-items: center;
-      margin: 130px auto 0; */
+      padding: 5px;
     }
 
     body{
@@ -238,7 +269,6 @@
     }
   
     .video {
-      /* margin-left: -205px; */
       width: 100%;
     }
 
@@ -247,10 +277,7 @@
   @media only screen and (max-width: 420px) {
     main {
       flex-direction: column-reverse;
-      /* justify-content: center;
-      margin: 5px;
-      align-items: center;
-      margin: 130px auto 0; */
+      padding: 5px;
     }
 
     body{
@@ -262,7 +289,6 @@
     }
   
     .video {
-      /* margin-left: -205px; */
       width: 100%;
     }
 
