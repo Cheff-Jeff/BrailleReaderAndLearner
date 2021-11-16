@@ -174,11 +174,11 @@ main{
 }
 
 .background{
-  width: 1050px;
+  width: 1550px;
   position: absolute;
-  top: 44px;
-  right: -280px;
-  transform: rotate(340deg);
+  top: -72px;
+  right: -530px;
+  transform: rotate(335deg);
   z-index: -2;
   opacity: 0.2;
 }
@@ -187,6 +187,15 @@ main{
 {
   .content{
     width: 100%;
+  }
+  .background{
+    width: 1050px;
+    position: absolute;
+    top: 44px;
+    right: -280px;
+    transform: rotate(340deg);
+    z-index: -2;
+    opacity: 0.2;
   }
 }
 
