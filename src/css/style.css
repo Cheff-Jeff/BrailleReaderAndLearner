@@ -5,7 +5,7 @@
   --btnBlue: #02306A;
   --btnFont: 19px;
   --btnSize: 110px;
-  --font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  --font: 'Roboto', sans-serif;
   --bigSize: 48px; /* 36pt */
   --mainSize: 20px; /* 14pt*/
   --navTxtBig: 25px;
@@ -174,11 +174,11 @@ main{
 }
 
 .background{
-  width: 1550px;
+  width: 1050px;
   position: absolute;
-  top: -72px;
-  right: -530px;
-  transform: rotate(335deg);
+  top: 44px;
+  right: -280px;
+  transform: rotate(340deg);
   z-index: -2;
   opacity: 0.2;
 }

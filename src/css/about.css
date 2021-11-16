@@ -5,16 +5,16 @@
     --btnBlue: #02306A;
     --btnFont: 19px;
     --btnSize: 110px;
-    --font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    --font: 'Roboto', sans-serif;
     --bigSize: 48px; /* 36pt */
     --mainSize: 19px; /* 14pt*/
     --txtColor: #000;
     --gray: #bdbdbd;
   }
 
-  html {
+  /* html {
       scroll-behavior: smooth;
-  }
+  } */
   
   img{
     width: 100%;
@@ -122,6 +122,9 @@
     padding-left: 20px;
 }
   
+  .video_container video{
+    height: 100%;
+  }
   .about_text {
     display: flex;
     justify-content: center;
