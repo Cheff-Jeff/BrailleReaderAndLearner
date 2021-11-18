@@ -9,7 +9,7 @@ namespace BrailleReader {
         private SerialPort serialPort;
 
         public SerialHelper(String port) {
-            serialPort = new SerialPort(port, 115200, Parity.None, 8, StopBits.One);
+            serialPort = new SerialPort(port, 9600, Parity.None, 8, StopBits.One);
             serialPort.DataReceived += new SerialDataReceivedEventHandler(portReceived);
         }
 

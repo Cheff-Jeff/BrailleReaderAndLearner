@@ -37,19 +37,19 @@ namespace BrailleReader
             // Alfabet
             // 
             this.Alfabet.AutoSize = true;
-            this.Alfabet.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Alfabet.Location = new System.Drawing.Point(115, 48);
+            this.Alfabet.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Alfabet.Location = new System.Drawing.Point(64, 176);
             this.Alfabet.Name = "Alfabet";
-            this.Alfabet.Size = new System.Drawing.Size(78, 86);
+            this.Alfabet.Size = new System.Drawing.Size(14, 13);
             this.Alfabet.TabIndex = 0;
             this.Alfabet.Text = "A";
             this.Alfabet.Click += new System.EventHandler(this.Alfabet_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(2, 160);
+            this.button1.Location = new System.Drawing.Point(12, 170);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 41);
+            this.button1.Size = new System.Drawing.Size(285, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "Terug naar Keuzemoment";
             this.button1.UseVisualStyleBackColor = true;
@@ -57,11 +57,11 @@ namespace BrailleReader
             // 
             // nextBtn
             // 
-            this.nextBtn.Location = new System.Drawing.Point(221, 160);
+            this.nextBtn.Location = new System.Drawing.Point(12, 12);
             this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(75, 23);
+            this.nextBtn.Size = new System.Drawing.Size(285, 152);
             this.nextBtn.TabIndex = 2;
-            this.nextBtn.Text = "button2";
+            this.nextBtn.Text = "LearnModus";
             this.nextBtn.UseVisualStyleBackColor = true;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
@@ -69,7 +69,7 @@ namespace BrailleReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 201);
+            this.ClientSize = new System.Drawing.Size(304, 204);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Alfabet);

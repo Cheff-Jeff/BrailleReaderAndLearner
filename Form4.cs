@@ -36,7 +36,6 @@ namespace BrailleReader
         private void button1_Click(object sender, EventArgs e)
         {
             serialHelper.getPort().Close();
-            Thread.Sleep(1000);
             this.Hide();
             Form3 f3 = new Form3(port); 
             f3.ShowDialog();
@@ -44,15 +43,21 @@ namespace BrailleReader
 
         private void nextBtn_Click(object sender, EventArgs e)
         {
-            var keys = new List<char>(BrailleHelper.letterToBinary.Keys);
+            while (true)
+            {
+                DateTime start = DateTime.Now;
+                DateTime finish = start.AddSeconds(3);
+                do { } while (DateTime.Now < finish);
+                var keys = new List<char>(BrailleHelper.letterToBinary.Keys);
+                Random random = new Random();
+                char randomChar = keys[random.Next(0, maxIndex)];
+                Console.WriteLine("Random char: " + randomChar);
+                Console.WriteLine("Sending: " + BrailleHelper.letterToBinary.GetValueOrDefault(randomChar, "poep"));
+                serialHelper.getPort().WriteLine(BrailleHelper.letterToBinary.GetValueOrDefault(randomChar, "poep"));
+                Alfabet.Text = Convert.ToString(randomChar);
+                speechHelper.say(Alfabet.Text);
 
-            Random random = new Random();
-            char randomChar = keys[random.Next(0, maxIndex)];
-            Console.WriteLine("Random char: " + randomChar);
-            Console.WriteLine("Sending: " + BrailleHelper.letterToBinary.GetValueOrDefault(randomChar, "poep"));
-            serialHelper.getPort().WriteLine(BrailleHelper.letterToBinary.GetValueOrDefault(randomChar, "poep"));
-            Alfabet.Text = Convert.ToString(randomChar);
-            speechHelper.say(Alfabet.Text);
+            }
         }
       
     }
